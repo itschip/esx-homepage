@@ -24,14 +24,13 @@ a:hover {
 html,
 body {
 	height: 100vh;
-	background-color: #222224;
 }
 
 body {
 	display: -ms-flexbox;
 	display: flex;
 	color: #e8e8e8;
-	text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+	text-shadow: 0 .05rem .1rem rgba(0, 0, 0, 0.5);
 }
 
 .cover-container {
@@ -60,7 +59,7 @@ body {
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-	border-bottom-color: rgba(255, 255, 255, .25);
+	border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -87,6 +86,12 @@ body {
 */
 .cover {
 	padding: 0 1.5rem;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+}
+.cover-content {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 .cover .btn-lg {
 	padding: .75rem 1.25rem;
@@ -98,5 +103,25 @@ body {
 * Footer
 */
 .mastfoot {
-	color: rgba(255, 255, 255, .5);
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+* Video
+*/
+
+.esx {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+#intro {
+	z-index: -100;
+}
+
+#loop {
+	z-index: -200;
 }
