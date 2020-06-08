@@ -1,56 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>ESX Framework</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="assets/style.css">
-	</head>
-	<body class="text-center">
-		<video autoplay muted class="esx" id="intro">
-			<source src="assets/intro.mp4" type="video/mp4">
-		</video>
-		<video loop style="display: none;" class="esx" id="loop">
-			<source src="assets/loop.mp4" type="video/mp4">
-		</video>
-		<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-			<header class="masthead mb-auto">
-				<div class="inner">
-					<h3 class="masthead-brand">ESX Framework</h3>
-					<nav class="nav nav-masthead justify-content-center">
-						<a class="nav-link" href="https://forum.esx-framework.org">Forum</a>
-						<a class="nav-link" href="https://github.com/esx-org">GitHub</a>
-						<a class="nav-link" href="https://discord.me/esx">Discord</a>
-						<a class="nav-link" href="https://wiki.esx-framework.org">Wiki</a>
-					</nav>
-				</div>
-			</header>
-			<main role="main" class="inner cover">
-				<div class="cover-content">
-					<h1 class="cover-heading">Extend your roleplay experience.</h1>
-					<p class="lead">ESX is a roleplay framework for FiveM where anything is possible.</p>
-					<p class="lead"><a href="https://github.com/esx-org/es_extended" class="btn btn-lg btn-secondary">Get Started</a></p>
-				</div>
-			</main>
-			<footer class="mastfoot mt-auto">
-				<div class="inner">
-					<p>esx-framework.org &copy; 2017-2020 &mdash; Hosted by <a href="https://cust.sys-one.fr/aff.php?aff=2">sys-one.fr</a></p>
-				</div>
-			</footer>
-		</div>
-	</body>
-	<script>
-		$(document).ready(function(){
-			const intro = document.getElementById('intro');
-			const loop = document.getElementById('loop');
-			intro.onended = function() {
-				intro.setAttribute('style', 'display: none;');
-				intro.removeAttribute('class');
-				loop.removeAttribute('style');
-				loop.play();
-			}
-		});
-	</script>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ESX Framework</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">ESX Framework</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#connect">Connect</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">ESX FRAMEWORK</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">An extendable roleplay framework for FiveM.</h2>
+                    <a class="btn btn-primary js-scroll-trigger" href="#about">Learn More</a>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4">What is ESX?</h2>
+                        <p class="text-white-50">ESX is a framework for FiveM developed by GiZz. He created it in 2017 and it has become wildly popular amongst FiveM users.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section">
+            <div class="container">
+                <!-- Project One Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Misty</h4>
+                                    <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="" /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Mountains</h4>
+                                    <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Connect Section -->
+        <section class="connect-section bg-black" id="connect">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <h2 class="text-white mb-5">Connect with us</h2>
+                        <a class="btn btn-primary mx-auto" href="https://forum.esx-framework.org" role="button">Join our Forum</a>
+                        <a class="btn btn-primary mx-auto" href="https://discord.me/esx" role="button">Join our Discord</a>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a><a class="mx-2" href="https://discord.me/esx"><i class="fab fa-discord"></i></a><a class="mx-2" href="https://github.com/esx-org"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container">esx-framework.org &copy; 2017-2020 &mdash; Hosted by <a href="https://cust.sys-one.fr/aff.php?aff=2">sys-one.fr</a></div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
