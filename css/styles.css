@@ -10,7 +10,6 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -39,7 +38,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  font-family: 'Raleway', sans-serif;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 *,
@@ -49,7 +49,7 @@
 }
 
 html {
-  font-family: 'Raleway', sans-serif;
+  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -61,13 +61,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #000;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -82,7 +82,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 
 p {
@@ -160,7 +160,7 @@ sup {
 }
 
 a {
-  color: #0f82af;
+  color: #64a19d;
   text-decoration: none;
   background-color: transparent;
 }
@@ -182,7 +182,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: 'Raleway', sans-serif;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -360,7 +360,7 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -1688,14 +1688,23 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  /*border-top: 1px solid #dee2e6;*/
+
 }
+
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  max-width: 225px;
+}
+
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  /*border-bottom: 2px solid #dee2e6;*/
 }
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  /*border-top: 2px solid #dee2e6;*/
 }
 
 .table-sm th,
@@ -1874,7 +1883,7 @@ pre code {
 .table-dark,
 .table-dark > th,
 .table-dark > td {
-  background-color: #c6c8ca;
+  background-color: transparent;
 }
 .table-dark th,
 .table-dark td,
@@ -1938,7 +1947,7 @@ pre code {
 
 .table-dark {
   color: #fff;
-  background-color: #343a40;
+  background-color: #transparent;
 }
 .table-dark th,
 .table-dark td,
@@ -2462,7 +2471,7 @@ textarea.form-control {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  
+  border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2491,33 +2500,33 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #0f82af;
-  border-color: #0f82af;
+  background-color: #3654AE;
+  border-color: #3654AE;
 }
 .btn-primary:hover {
-  color: #0f82af;
-  background-color: #fff;
-  border-color: #fff;
-}
-.btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #0f82af;
-  border-color: #0f82af;
+  background-color: #486CD7;
+  border-color: #486CD7;
+}
+/*.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #486CD7;
+  border-color: #486CD7;
   box-shadow: 0 0 0 0.2rem rgba(123, 175, 172, 0.5);
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #0f82af;
-  border-color: #0f82af;
+  background-color: #486CD7;
+  border-color: #486CD7;
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #0f82af;
-  border-color: #0f82af;
+  background-color: #3654AE;
+  border-color: #3654AE;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(123, 175, 172, 0.5);
-}
+}*/
 
 .btn-secondary {
   color: #fff;
@@ -4073,7 +4082,6 @@ input[type=button].btn-block {
 .navbar-brand {
   display: inline-block;
   padding-top: 0.3125rem;
-  font-family: 'Raleway', sans-serif;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
@@ -4348,20 +4356,12 @@ input[type=button].btn-block {
   color: rgba(0, 0, 0, 0.9);
 }
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 1.0);
 }
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.5);
 }
-.navbar-light .navbar-nav .nav-link.disabled {
-  color: rgba(0, 0, 0, 0.3);
-}
-.navbar-light .navbar-nav .show > .nav-link,
-.navbar-light .navbar-nav .active > .nav-link,
-.navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .nav-link.active {
-  color: rgba(0, 0, 0, 0.9);
-}
+
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
   border-color: rgba(0, 0, 0, 0.1);
@@ -5701,8 +5701,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: 'Raleway', sans-serif;
-
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5804,8 +5803,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: 'Raleway', sans-serif;
-
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7754,6 +7752,11 @@ button.bg-black:focus {
   margin-top: 3rem !important;
 }
 
+.mt-6,
+.my-6 {
+  margin-top: 4rem !important;
+}
+
 .mr-5,
 .mx-5 {
   margin-right: 3rem !important;
@@ -7762,6 +7765,11 @@ button.bg-black:focus {
 .mb-5,
 .my-5 {
   margin-bottom: 3rem !important;
+}
+
+.mb-6,
+.my-6 {
+  margin-bottom: 21rem !important;
 }
 
 .ml-5,
@@ -9803,7 +9811,6 @@ button.bg-black:focus {
 
 .text-monospace {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
-  
 }
 
 .text-justify {
@@ -9926,6 +9933,18 @@ button.bg-black:focus {
 
 .text-white {
   color: #fff !important;
+}
+
+.text-title {
+  color: #fefee1 !important;
+}
+
+.text-normal {
+  color: #c8cdbb !important;
+}
+
+.text-question {
+  color: #B5B4CF !important;
 }
 
 .text-primary {
@@ -10137,13 +10156,13 @@ body {
     border-color: #dee2e6;
  }
 }
-body {
+/*body {
   letter-spacing: 0.0625em;
-}
+}*/
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color: #23272A;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -10155,10 +10174,9 @@ body {
   outline: none;
 }
 #mainNav .navbar-brand {
-  
-  color: #000000;
+  color: #fff;
   font-weight: 700;
-  padding: 0.9rem 0;
+  /*padding: 0.9rem 0;*/
 }
 #mainNav .navbar-nav .nav-item:hover {
   color: fade(#fff, 80%);
@@ -10169,60 +10187,13 @@ body {
   outline: none;
   background-color: transparent;
 }
-@media (min-width: 992px) {
-  #mainNav {
-    padding-top: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-    background-color: transparent;
-    transition: background-color 0.3s ease-in-out;
-  }
-  #mainNav .navbar-brand {
-    padding: 0.5rem 0;
-    color: #fff;
-  }
-  #mainNav .nav-link {
-    transition: none;
-    padding: 2rem 1.5rem;
-    color: #fff;
-  }
-  #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
-  }
-  #mainNav .nav-link:active {
-    color: #fff;
-  }
-  #mainNav.navbar-shrink {
-    background-color: #fff;
-  }
-  #mainNav.navbar-shrink .navbar-brand {
-    color: #000000;
-  }
-  #mainNav.navbar-shrink .nav-link {
-    color: #000000;
-    padding: 1.5rem 1.5rem 1.25rem;
-    border-bottom: 0.25rem solid transparent;
-  }
-  #mainNav.navbar-shrink .nav-link:hover {
-    color: #0f82af;
-  }
-  #mainNav.navbar-shrink .nav-link:active {
-    color: #0f82af;
-  }
-  #mainNav.navbar-shrink .nav-link.active {
-    color: #0f82af;
-    outline: none;
-    border-bottom: 0.25rem solid #0f82af;
-  }
-}
 
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  text-transform: uppercase;
+  padding: 1.25rem 1.5rem;
+  /*font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";*/
+  font-size: 120%;
+  /*text-transform: uppercase;*/
   letter-spacing: 0.15rem;
   border: 0;
 }
@@ -10233,20 +10204,17 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../assets/img/bg2.jpg");
-  
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
 .masthead h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "titlexd";
   font-size: 2.5rem;
   line-height: 2.5rem;
-  font-weight: 700;
   letter-spacing: 0.8rem;
-  background: linear-gradient(#0f82af, #222224);
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
@@ -10278,16 +10246,17 @@ body {
 }
 
 .about-section {
-  padding-top: 10rem;
-  background: rgba(0, 0, 0, 0.9);
+  /*padding-top: 10rem;*/
+  background: rgba(255, 255, 255, 0.1);
 }
-.about-section p {
+/*.about-section p {
   margin-bottom: 5rem;
-}
+}*/
 
 .projects-section {
-  padding: 10rem 0;
-  background: rgba(0, 0, 0, 0.9);
+  padding-top: 25px;
+  padding-bottom: 10px;
+  background: rgba(255, 255, 255, 0.1);
 }
 .projects-section .featured-text {
   padding: 2rem;
@@ -10313,8 +10282,6 @@ body {
   }
 }
 .connect-section {
-  padding-top: 10rem;
-  padding-bottom: 1.5rem;
   background: rgba(0, 0, 0, 0.9);
 }
 .social {
@@ -10337,5 +10304,198 @@ body {
 }
 .footer {
   padding-top: 0.5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
+}
+
+@font-face {
+font-family: "asd";
+src:
+url("HeadingPro-Bold.woff") format("woff");
+}
+
+
+.fontLOL {
+font-family: "asd";
+font-size: 30px;
+}
+
+@font-face {
+font-family: "titlexd";
+src:
+url("AgeoPersonalUse-Light.woff") format("woff");
+}
+
+
+.fonttitle {
+font-family: "titlexd";
+font-size: 120px;
+}
+
+.down {
+  bottom: 200px;
+}
+
+#intro {
+  z-index: -100;
+}
+
+.esx {
+    position: absolute;
+    opacity: 0.5;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+#loop {
+    z-index: -200;
+}
+
+.infoguild1 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.infoguild2 {
+  text-align: center;
+  padding-top: 2px;
+}
+
+.borderaloxoro {
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.borderabajo {
+  border-bottom: solid 2px;
+  padding-bottom: 50px;
+}
+
+.ending {
+  padding-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.donwload {
+  padding-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.comparate {
+  padding-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.coding {
+  padding-bottom: 50px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ads {
+  padding-bottom: 50px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.goodbye-esx1 {
+  padding-bottom: 50px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 500px) {
+  .lefthand {
+    padding-left: 95px;
+  }
+
+  #michael {
+    position: absolute;
+    visibility: hidden;
+    z-index: 100;
+    height: 433px;
+    padding-left: 700px;
+  }
+}
+
+@media (min-width: 576px) {
+  .lefthand {
+    padding-left: 115px;
+  }
+
+  #michael {
+    position: absolute;
+    visibility: hidden;
+    z-index: 100;
+    height: 433px;
+    padding-left: 700px;
+  }
+}
+
+@media (min-width: 768px) {
+  .lefthand {
+    padding-left: 200px;
+  }
+
+  #michael {
+    position: absolute;
+    visibility: hidden;
+    z-index: 100;
+    height: 433px;
+    padding-left: 700px;
+  }
+}
+
+@media (min-width: 992px) {
+  .lefthand {
+    padding-left: 280px;
+  }
+
+  #michael {
+    position: absolute;
+    visibility: visible;
+    z-index: 100;
+    height: 433px;
+    padding-left: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lefthand {
+    padding-left: 280px;
+  }
+
+  #michael {
+    position: absolute;
+    visibility: visible;
+    z-index: 100;
+    height: 433px;
+    padding-left: 800px;
+  }
+}
+
+.borderleft {
+  border-left: solid 2px;
+}
+
+
+.image {
+  display: block;
+  width: 100%;
+  opacity: 0.8;
+  transition: .5s ease;
+  background-color: black;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+}
+
+.bordercomplete {
+  border: solid 1px rgba(250, 255, 225, 0.2);
+  border-radius: 5px;
+}
+
+.filtercontrast {
+  filter: contrast(0.70);
 }
